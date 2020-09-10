@@ -1,0 +1,14 @@
+1. Wat doet de constructor van de klasse book?
+    Die initialiseerd de waardes die bij de class book horen.
+
+2. Hoe noemen we de tekst tussen de : en de { bij de constructor?
+    de initialisatielijst
+
+3. Welke functies van de klasse book zijn van buitenaf toegankelijk?
+    de print functie en de constructor
+
+4. Waarom denk je de schrijver van deze code er voor heeft gekozen sommige functie private te maken?
+    Zodat deze functie alleen opgeroepen kan worden door een object wat hier toegang tot heeft
+
+5. Waarom staat er in de .cpp voor elke functie "book::"?
+    Zodat de compiler weet dat we de class book aanspreken.

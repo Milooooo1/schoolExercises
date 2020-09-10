@@ -1,0 +1,35 @@
+class course {
+public:
+    const std::vector< char > name;
+};
+
+class mark {
+public:
+    course & course;
+    uint8_t number;
+};
+
+class student {
+public:
+    const std::string name;
+    int number;
+    std::vector< mark > marks;
+};
+
+class klas {
+public:
+    const std::array< char, 3 > name;
+    std::vector< student > students;
+    klas(){}
+};
+
+klas v1a;
+auto a = v1a;               //Is van type klas
+auto b = a.name;            //Is van type const std::array<char 3>
+auto c = a.students[ 3 ];   //Is van type student
+auto d = c.name;            //Is van type const string
+auto e = c.number;          //Is van type int
+auto f = c.marks[ 7 ];      //Is van type mark
+auto g = f.course;          //Is van type course &
+auto h = f.number;          //Is van type uint8_t
+auto i = g.name;            //Is van type const vector< char > 

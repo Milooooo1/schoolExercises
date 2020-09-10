@@ -1,0 +1,16 @@
+De waardes van de code in de opdracht "Katten" zijn:
+pianocat:
+	red: 255
+	green: 40
+	blue: 30
+	lives: 9 
+ceilingcat: 
+	red:7
+	green: 4
+	blue: 5
+	lives: 9 
+happycat:
+	red: (230 + 7)  / 2 = 118
+	green: (10 + 4) / 2 = 7
+	blue:  (6 + 5)  / 2 = 5.5 = 5
+	lives: 9 + 1

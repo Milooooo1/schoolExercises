@@ -1,0 +1,6 @@
+
+<student>
+    <naam>Milo Beliën</naam>
+    <studentnummer>1758427</studentnummer>
+    <klas>V1A</klas>
+</student>

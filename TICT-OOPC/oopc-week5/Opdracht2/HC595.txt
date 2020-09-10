@@ -1,0 +1,51 @@
+1 Q1:
+Parallel output pin.
+
+2 Q2:
+Parallel output pin.
+
+3 Q3:
+Parallel output pin.
+
+4 Q4:
+Parallel output pin.
+
+5 Q5:
+Parallel output pin.
+
+6 Q6:
+Parallel output pin.
+
+7 Q7:
+Parallel output pin.
+
+8 GND:
+Dit is de ground pin, deze maakt de cirkel rond en sluit je aan op de arduino op de GND header.
+
+9 Q7' / Q7S:
+Dit is de serial data output, alle data gaat achter elkaar over deze pin ipv parallel over de 8 andere pinnen.
+
+10 ~MR:
+Dit is de Master Reset pin die actief laag is, deze sluit je aan op de VCC.
+
+11 SHCP:
+Dit is de SHift Clock Pulse pin. 
+
+12 STCP:
+Dit is de hold klok pin.
+
+13 ~OE:
+Dit is de Output Enable pin die actief laag is, deze sluit je aan op de GND.
+
+14 DS:
+Dit is de data pin.
+
+15 Q0:
+Parallel output pin.
+
+16 VCC:
+Dit is de pin die voor de spanning zorgt, deze sluit je aan op de VCC header op de arduino.
+
+(DATASHEET)
+https://www.hackerstore.nl/PDFs/74HC595.pdf
+https://www.ti.com/lit/ds/symlink/cd74hc595.pdf?ts=1590400188545

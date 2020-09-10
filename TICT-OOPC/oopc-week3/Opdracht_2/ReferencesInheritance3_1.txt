@@ -1,0 +1,26 @@
+class vehicle { . . . };
+class car : public vehicle { . . . };
+class train : public vehicle { . . . };
+class intercity : public train { . . . };
+
+void travel( vehicle & v );
+void ovchipkaart( train & t );
+void file( car & c );
+
+car batmobiel;
+intercity utr_amst;
+train ICE;
+
+file( batmobiel );              // 1 Geen error
+ovchipkaart( utr_amst );        // 2 Geen error omdat intercity afstamt van train
+file( ICE )                     // 3 Wel een error, de constructor verwacht een car object en geen train
+ovchipkaart( batmobiel )        // 4 Wel een error, de constructor verwacht een train object en geen car
+travel( utr_amst )              // 7 Geen error omdat intercity afstamt van vehicle
+travel( batmobiel )             // 6 Geen error
+
+intercity   & ref7 = utr_amst;    // 7 Geen error
+car         & ref8 = utr_amst;    // 8 Wel error een car kan geen intercity worden
+train       & ref9 = utr_amst;    // 9 Geen error
+train       & ref10 = batmobiel;  // 10 Wel error batmobiel is een car en stamt niet af van train
+intercity   & ref11 = batmobiel;  // 11 Wel error batmobiel kan geen train of intercity worden
+intercity   & ref12 = ICE;        // 12 Wel een error je kan niet van trein naar intercity

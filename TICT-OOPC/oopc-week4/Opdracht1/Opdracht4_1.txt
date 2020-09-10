@@ -1,0 +1,8 @@
+1. Wat betekend de term 'bare metal':
+Bare metal betekend dat je alleen het brood nodige hebt, je schrijft de code dus voor een specifieke processor architectuur. 
+
+2. Wat is het nut van een 'weak pull-up':
+Deze zorgt ervoor dat de pin waar deze resistor op aangesloten is hoog is (Pulled to vcc). De input pin leest nu een high state (1). Je hebt nu duidelijkheid of de input pin nu een 1 of een 0 leest.  
+
+3 Wat is het nut van een namespace, welk probleem kan je ermee vermijden?:
+Een namespace is handig voor als je met verschillende libraries of objecten werkt, het zorgt ervoor dat je nameclashes voorkomt. 

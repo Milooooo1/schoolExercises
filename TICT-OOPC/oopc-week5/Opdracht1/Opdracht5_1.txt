@@ -1,0 +1,12 @@
+5_1 Vragen 
+
+Hoeveel GPIO pinnen heb je nodig om 3 SPI perohperals aan te sluiten?
+Je hebt 6 GPIO pinnen nodig om 3 SPI peripherals aan te sluiten, 1 voor de clock, data in en data out en 3 voor de chip-select (CS).
+
+
+Wat is de functie van Q7' output pin van een HC5959 chip?
+Dit is een pin voor serial data output, alle data gaat over 1 pin ipv 8. 
+
+
+(DATASHEET)
+https://www.ti.com/lit/ds/symlink/cd74hc595.pdf?ts=1590400188545
