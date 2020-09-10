@@ -1,0 +1,16 @@
+void raadGetalOnderDeTien()
+    int generateRandomInt()
+    bool compareInts()
+
+int aantalWoordenInLangsteZin(string filename)
+    string fileToString()
+    string findBiggestSentence()
+    int countWordsInSentence()
+
+void bestuurZelfrijdendeAuto()
+    float checkDistanceToSurroundings()
+        float adaptSpeedToSurroundings()
+    string scanForSigns()
+        void adaptToSigns()
+    float scanForTrafficLights()
+        void adaptToTrafficLights()

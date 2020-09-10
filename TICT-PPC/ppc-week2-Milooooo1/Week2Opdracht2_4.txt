@@ -1,0 +1,31 @@
+#include <vector>
+#include <iostream>
+using namespace std;
+
+int getIndex(const vector<int>& numbers){
+    for(unsigned int i = numbers.size(); i > 0; i--){
+        if(numbers[i-1] == 8){
+            return i-1;
+        }
+    }
+    return -1;
+}
+
+int main(){
+    vector<int> n = {37,8,7,15,8,2,8,5};
+    int index = getIndex8(n);
+    cout << "There is a 8 at index: " << index << "\n";
+}
+
+A:
+for(unsigned int i = 0; i < numbers.size(); i--){
+        if(numbers[i] == 8){
+            return number[0, 8];
+        }
+    }
+
+B:
+Als de lijst leeg is
+
+C:
+Omdat deze waardes in de lijst kunnen zitten en -1 niet aangezien het een unsigned vector is.

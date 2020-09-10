@@ -1,0 +1,37 @@
+#include <vector>1using namespace std;
+vector<int> positive1(vector<int> numbers){
+    for(unsigned int i=0; i<numbers.size(); i++){
+        if(numbers[i] < 0){
+            numbers[i] *= -1;
+        }
+    }
+    return numbers;
+}
+    
+void positive2(vector<int> & numbers){
+    for(unsigned int i=0; i<numbers.size(); i++){
+        if(numbers[i] < 0){
+            numbers[i] *= -1;
+        }
+    }
+}
+
+vector<int> positive3(const vector<int> & numbers){
+    vector<int> newNumbers = numbers;
+    for(unsigned int i=0; i<newNumbers.size(); i++){
+        if(newNumbers[i] < 0){
+            newNumbers[i] *= -1;
+        }
+    }return newNumbers;
+}
+
+A:
+Alle negatieve nummers worden positief gemaakt.
+
+B:
+Hij geeft zijn resultaat terug in de vorm van een variable.
+
+C:
+Positive1 Behoud het origineel
+Positive2 Past het origineel aan en is dus sneller
+Positive3 Behoud het origineel en returnt een nieuw variable

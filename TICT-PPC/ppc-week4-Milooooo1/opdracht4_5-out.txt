@@ -1,0 +1,5 @@
+Dit is een test bestand voor opdracht4_5.
+Alle lege regels worden weggehaald.
+Ook alle tabs worden weggehaald.
+dubbelespaties worden ook weggehaald.
+test

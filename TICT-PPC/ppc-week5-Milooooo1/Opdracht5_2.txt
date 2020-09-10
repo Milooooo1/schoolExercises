@@ -1,0 +1,1 @@
+De functie m() zoekt het kleinste getal en returned deze. ?

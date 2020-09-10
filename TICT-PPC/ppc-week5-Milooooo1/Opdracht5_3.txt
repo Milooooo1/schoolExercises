@@ -1,0 +1,11 @@
+De code wordt 9 keer uitgevoerd met a=900 en b=280.
+
+1 return 620, 280
+2 return 340, 280
+3 return 60, 280
+4 return 60, 220
+5 return 60, 160
+6 return 60, 100
+7 return 60, 40
+8 return 20, 40
+9 return 20, 20

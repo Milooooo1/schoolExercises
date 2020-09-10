@@ -1,0 +1,1 @@
+De functie ears telt het aantal oren van alle konijnen.

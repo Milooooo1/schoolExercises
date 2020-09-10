@@ -1,0 +1,14 @@
+De code uit opdracht 3.4 telt een op bij het resultaat waarna hij de 
+for loop in gaat waarin elke bit van result en ch shift, result naar links en ch naar rechts
+vervolgens wordt result 'ge-ored' met ch waar 1 bij opgeteld is.
+
+char reverse(uint8_t ch){
+    char result = (ch & 1);
+    
+    for(int i=0; i<7; i++){
+        result <<= 1;
+        ch >>= 1;
+        result |= (ch & 1);
+    }
+    return result;
+}

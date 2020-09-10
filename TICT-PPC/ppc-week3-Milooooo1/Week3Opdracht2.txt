@@ -1,0 +1,3 @@
+De code uit opdracht 3.2 kijkt of de index een even of oneven getal is.
+Als hij even is set hij de vijfde bit naar een 1
+Als hij oneven is reset hij de vijfde bit naar een 0
