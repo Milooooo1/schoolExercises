@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+while true ; do
+	case $1 in
+		-h|--help)
+			echo "use -bestand.[extension] to execute a file."
+			break
+			;;
+		-bestand.py)
+			
+			python bestand.py
+			break
+			;;
+		-bestand.sh)
+			bash bestand.sh
+			break
+			;;
+		-bestand.cc)
+			cat bestand.cc
+			break
+			;;
+		*)
+			echo "Error, file extension not supported try another."
+			break
+			;;
+		esac
+	done
