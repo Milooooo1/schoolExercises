@@ -1,0 +1,7 @@
+Om de screencast/ demonstratie van ons programma te zien download de volgende link:
+https://www.mediafire.com/file/7j6tghvktx5jzru/Screencast.mp4/file
+Of klik op de het mp4 bestand in deze map.
+
+Om het programma zelf uit te testen ga naar Miniproject\dist\NS Fietsenstalling.exe ook kan je deze map openen in je editor en main.py uitvoeren.
+
+Het verslag is ook te vinden in deze map.

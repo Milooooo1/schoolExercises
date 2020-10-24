@@ -1,0 +1,302 @@
+{
+    "1": {
+        "cardNum": 10,
+        "vacant": false,
+        "time": "2019-10-28 21:54",
+        "numDataRequested": 3
+    },
+    "2": {
+        "cardNum": 8,
+        "vacant": false,
+        "time": "2019-10-29 21:36",
+        "numDataRequested": 1
+    },
+    "3": {
+        "cardNum": 9,
+        "vacant": false,
+        "time": "2019-10-29 16:52",
+        "numDataRequested": 0
+    },
+    "4": {
+        "cardNum": 2,
+        "vacant": false,
+        "time": "2019-11-01 15:15",
+        "numDataRequested": 1
+    },
+    "5": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "6": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "7": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "8": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "9": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "10": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "11": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "12": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "13": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "14": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "15": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "16": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "17": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "18": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "19": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "20": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "21": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "22": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "23": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "24": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "25": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "26": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "27": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "28": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "29": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "30": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "31": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "32": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "33": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "34": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "35": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "36": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "37": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "38": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "39": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "40": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "41": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "42": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "43": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "44": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "45": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "46": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "47": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "48": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "49": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    },
+    "50": {
+        "cardNum": 0,
+        "vacant": true,
+        "time": "NULL",
+        "numDataRequested": 0
+    }
+}
