@@ -1,0 +1,37 @@
+000006c2 <_ZN5hwlib33spi_bus_bit_banged_sclk_mosi_miso14write_and_readEjPKh>:        // Cycles:
+     6c2:	b570      	push	{r4, r5, r6, lr}                                       // 5
+     6c4:	4604      	mov	r4, r0                                                 // 1
+     6c6:	2508      	movs	r5, #8                                                 // 1 
+     6c8:	7816      	ldrb	r6, [r2, #0]                                           // 2
+     6ca:	6920      	ldr	r0, [r4, #16]                                          // 2
+     6cc:	f3c6 11c0 	ubfx	r1, r6, #7, #1                                         // 1
+     6d0:	6803      	ldr	r3, [r0, #0]                                           // 2
+     6d2:	0076      	lsls	r6, r6, #1                                             // 1
+     6d4:	681b      	ldr	r3, [r3, #0]                                           // 2
+     6d6:	4798      	blx	r3                                                     // 2
+     6d8:	6920      	ldr	r0, [r4, #16]                                          // 2
+     6da:	6803      	ldr	r3, [r0, #0]                                           // 2
+     6dc:	685b      	ldr	r3, [r3, #4]                                           // 2
+     6de:	4798      	blx	r3                                                     // 2
+     6e0:	68a0      	ldr	r0, [r4, #8]                                           // 2
+     6e2:	2101      	movs	r1, #1                                                 // 1
+     6e4:	6803      	ldr	r3, [r0, #0]                                           // 2
+     6e6:	681b      	ldr	r3, [r3, #0]                                           // 2
+     6e8:	4798      	blx	r3                                                     // 2
+     6ea:	68a0      	ldr	r0, [r4, #8]                                           // 2
+     6ec:	6803      	ldr	r3, [r0, #0]                                           // 2
+     6ee:	685b      	ldr	r3, [r3, #4]                                           // 2
+     6f0:	4798      	blx	r3                                                     // 2
+     6f2:	68a0      	ldr	r0, [r4, #8]                                           // 2
+     6f4:	2100      	movs	r1, #0                                                 // 1
+     6f6:	6803      	ldr	r3, [r0, #0]                                           // 2
+     6f8:	681b      	ldr	r3, [r3, #0]                                           // 2
+     6fa:	4798      	blx	r3                                                     // 2
+     6fc:	68a0      	ldr	r0, [r4, #8]                                           // 2
+     6fe:	6803      	ldr	r3, [r0, #0]                                           // 2
+     700:	685b      	ldr	r3, [r3, #4]                                           // 2
+     702:	4798      	blx	r3                                                     // 2
+     704:	3d01      	subs	r5, #1                                                 // 1 
+     706:	d1e0      	bne.n	6ca <_ZN5hwlib33spi_bus_bit_banged_sclk_mosi_miso14write_and_readEjPKh+0x8> // 3 65 * 8 = 520 
+     708:	bd70      	pop	{r4, r5, r6, pc}                                       // 7 of 5 + 520
+                                                                                     // totaal: 527 of in het geval 525.

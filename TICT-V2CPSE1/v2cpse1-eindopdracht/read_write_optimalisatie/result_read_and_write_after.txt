@@ -1,0 +1,36 @@
+000006c2 <_ZN5hwlib33spi_bus_bit_banged_sclk_mosi_miso14write_and_readEjPKh>:
+     6c2:	b570      	push	{r4, r5, r6, lr}
+     6c4:	4604      	mov	r4, r0
+     6c6:	2508      	movs	r5, #8
+     6c8:	7816      	ldrb	r6, [r2, #0]
+     6ca:	6920      	ldr	r0, [r4, #16]
+     6cc:	f3c6 11c0 	ubfx	r1, r6, #7, #1
+     6d0:	6803      	ldr	r3, [r0, #0]
+     6d2:	0076      	lsls	r6, r6, #1
+     6d4:	681b      	ldr	r3, [r3, #0]
+     6d6:	4798      	blx	r3
+     6d8:	6920      	ldr	r0, [r4, #16]
+     6da:	6803      	ldr	r3, [r0, #0]
+     6dc:	685b      	ldr	r3, [r3, #4]
+     6de:	4798      	blx	r3
+     6e0:	68a0      	ldr	r0, [r4, #8]
+     6e2:	2101      	movs	r1, #1
+     6e4:	6803      	ldr	r3, [r0, #0]
+     6e6:	681b      	ldr	r3, [r3, #0]
+     6e8:	4798      	blx	r3
+     6ea:	68a0      	ldr	r0, [r4, #8]
+     6ec:	6803      	ldr	r3, [r0, #0]
+     6ee:	685b      	ldr	r3, [r3, #4]
+     6f0:	4798      	blx	r3
+     6f2:	68a0      	ldr	r0, [r4, #8]
+     6f4:	2100      	movs	r1, #0
+     6f6:	6803      	ldr	r3, [r0, #0]
+     6f8:	681b      	ldr	r3, [r3, #0]
+     6fa:	4798      	blx	r3
+     6fc:	68a0      	ldr	r0, [r4, #8]
+     6fe:	6803      	ldr	r3, [r0, #0]
+     700:	685b      	ldr	r3, [r3, #4]
+     702:	4798      	blx	r3
+     704:	3d01      	subs	r5, #1
+     706:	d1e0      	bne.n	6ca <_ZN5hwlib33spi_bus_bit_banged_sclk_mosi_miso14write_and_readEjPKh+0x8>
+     708:	bd70      	pop	{r4, r5, r6, pc}

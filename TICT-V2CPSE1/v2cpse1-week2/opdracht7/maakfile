@@ -1,0 +1,23 @@
+CC  = gcc
+CXX = g++ -std=c++17
+rm := rm -f
+
+.PHONY: build clean
+
+build: generator.exe
+
+clean:
+	$(rm) generator.exe generator.o melody.o note_player.o note_player_print.o 
+
+generator.exe : generator.o note_player_print.o 
+	$(CXX) generator.o note_player_print.o melody.o -o generator.exe 
+
+#melody.o : melody.hpp note_player.hpp note.hpp
+#	$(CXX) -c melody.cpp -o melody.o
+
+note_player_print.o : note_player_print.cpp note_player_print.hpp note_player.hpp note.hpp
+	$(CXX) -c note_player_print.cpp -o note_player_print.o
+
+generator.o : generator.cpp fur_elise.hpp melody.hpp note_player.hpp note.hpp note_player_print.hpp 
+	$(CXX) -c generator.cpp -o generator.o 
+

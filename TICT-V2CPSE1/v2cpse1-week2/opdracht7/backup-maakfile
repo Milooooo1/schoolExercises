@@ -1,0 +1,30 @@
+CC  = gcc
+CXX = g++ -std=c++17
+rm := rm -f
+
+.PHONY: build clean
+
+build: main.exe
+
+clean:
+	$(rm) main.exe generator.o melody.o
+
+main.exe : rtttl_player.o generator.o note_player_print.o note_player_gpio.o melody.o
+	$(CXX) -c rtttl_player.o generator.o note_player_print.o note_player_gpio.o melody.o -o main.exe
+
+melody.o : melody.cpp melody.hpp note_player.hpp note.hpp
+	$(CXX) -c melody.cpp melody.hpp note_player.hpp note.hpp -o melody.o
+
+note_player_gpio.o : note_player_gpio.hpp note_player_gpio.cpp note_player.hpp note.hpp
+	$(CXX) -c note_player_gpio.hpp note_player_gpio.cpp note_player.hpp note.hpp -o note_player_gpio.o 
+
+note_player_print.o : note_player_print.cpp note_player_print.hpp note_player.hpp note.hpp
+	$(CXX) -c note_player_print.cpp note_player_print.hpp note_player.hpp note.hpp -o note_player_print.o
+
+generator.o : generator.cpp fur_elise.hpp melody.hpp note_player.hpp note.hpp note_player_gpio.hpp note_player_print.hpp rtttl_player.hpp
+	$(CXX) -c generator.cpp fur_elise.hpp melody.hpp note_player.hpp note.hpp note_player_gpio.hpp note_player_print.hpp rtttl_player.hpp -o generator.o 	
+
+rtttl_player.o : rtttl_player.cpp rtttl_player.hpp note_player.hpp note.hpp 
+	$(CXX) -c rtttl_player.cpp rtttl_player.hpp note_player.hpp note.hpp -o rtttl_player.o 
+
+
