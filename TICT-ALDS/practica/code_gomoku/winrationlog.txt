@@ -1,0 +1,455 @@
+Experimentatie met verschillende UCT formules. 
+Ik ben begonnen met de standaard UCT formule waar ik de constante van heb aangepast. Mijn eerste test was met een 7x7 bord met 2 players, 
+de eerste player had een hoge constante van 8, en de andere had een lage constante van 2. Deze test heb ik 4x gedaan en gaf de volgende resultaten. 
+De lage constante is 2x wit en 2x zwart, het zelfde geld voor de hoge constante
+
+- Test 1
+0.0 1.0 [HIGH CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [LOW CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+- Test 2
+0.0 1.5 [LOW CONSTANT Milo Beliën Color: White ID: 1758427, 1.5] 
+0.5 0.0 [HIGH CONSTANT Milo Beliën Color: Black ID: 1758427, 0.5]
+- Test 3
+0.0 1.5 [HIGH CONSTANT Milo Beliën Color: White ID: 1758427, 1.5]
+0.5 0.0 [LOW CONSTANT Milo Beliën Color: Black ID: 1758427, 0.5]
+- Test 4
+0.0 1.0 [LOW CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HIGH CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+
+
+Deze tests opeen 19x19 bord geven de volgende resultaten:
+- Test 1
+0.0 1.0 [HIGH CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [LOW CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+- Test 2
+0.0 1.0 [LOW CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HIGH CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+- Test 3
+0.0 1.0 [HIGH CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [LOW CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+- Test 4
+0.0 1.0 [LOW CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HIGH CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+
+
+
+In kan uit deze tests concluderen dat op een groot bord deze constantes nog geen verschil maken, dit komt deels ook doordat mijn algoritme
+nog niet slim genoeg is, hij kijkt nog niet ver genoeg de toekomst in waar de exploratie waarde verschil maakt. Ik probeer nog 1 test met een drastische 
+verandering in constantes, als ik hier geen verschil in zie ga ik eerst slimme heuristieken toevoegen. 
+
+Ik pak nu een lage constante van 0.2 en een hoge onstante van 2
+
+Tests op een 7x7 bord
+- Test 1
+0.0 0.0 [LOW CONSTANT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HIGH CONSTANT Milo Beliën Color: Black ID: 1758427, 2.0]
+- Test 2
+0.0 1.0 [HIGH CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [LOW CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+- Test 3
+0.0 1.5 [LOW CONSTANT Milo Beliën Color: White ID: 1758427, 1.5]
+0.5 0.0 [HIGH CONSTANT Milo Beliën Color: Black ID: 1758427, 0.5]
+- Test 4
+0.0 2.0 [HIGH CONSTANT Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 [LOW CONSTANT Milo Beliën Color: Black ID: 1758427, 0.0]
+
+Het lijkt er op dat een een hoge constante als wit een winrate heeft van 75%, als zwart is dit 62%. Dit zijn niet erg veel tests om deze cijfers accuraat uit 
+te krijgen. Ik sla nu de 19x19 bord over aangezien mijn algoritme niet slim genoeg is, ik ga nu 5 tests doen per wit of wit.
+De nieuwe constantes zijn 0.7 en 1.5
+
+
+LOW  = Zwart
+High = Wit
+- Test 1
+0.0 1.0 [LOW CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HIGH CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+- Test 2
+0.0 1.0 [LOW CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HIGH CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+- Test 3
+0.0 1.0 [LOW CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HIGH CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+- Test 4
+0.0 1.0 [LOW CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HIGH CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+- Test 5
+0.0 1.0 [LOW CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HIGH CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+
+Zwart (HIGH) totaal aantal gewonnen = 5   Winrate = 50%
+Wit (LOW)  totaal aantal gewonnen   = 5   Winrate = 50%
+Totaal aantal gespeeld              = 10
+
+
+LOW  = Wit
+High = Zwart
+- Test 1
+0.0 1.5 [HIGH CONSTANT Milo Beliën Color: White ID: 1758427, 1.5]
+0.5 0.0 [LOW CONSTANT Milo Beliën Color: Black ID: 1758427, 0.5]
+- Test 2
+0.0 1.0 [HIGH CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [LOW CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+- Test 3
+0.0 1.0 [HIGH CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [LOW CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+- Test 4
+0.0 1.0 [HIGH CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [LOW CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+- Test 5
+0.0 1.0 [HIGH CONSTANT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [LOW CONSTANT Milo Beliën Color: Black ID: 1758427, 1.0]
+
+Zwart (HIGH) totaal aantal gewonnen = 4.5   Winrate = 45%
+Wit (LOW)  totaal aantal gewonnen   = 5.5   Winrate = 55%
+Totaal aantal gespeeld              = 10
+
+Als ik terugkijk op deze tests dan zie je een erg klein verschil waar als je een lage constante gebruikt wanneer je wit bent je net wat meer kans hebt om 
+te winnen. Echter kunnen we dit dus alleen zeggen ten opzichte van een player die een hogere constante heeft van 1.5. 
+Ik ga nu eerst slimme heuristieken toevoegen waarna ik nog meer ga testen, bij de volgende tests ga ik echter ook een random_player toe voegen die als een
+soort baseline moet gaan functioneren. Ik wil dan ook met een andere benaderingsformule experimenteren, deze benaderingsformule heet RAVE of PUCT
+https://www.chessprogramming.org/UCT#PUCT
+
+Als slimme heuristiek ga ik nu implementeren dat mijn player alleen de moves meegeeft aan mijn boom waar je een steen naast een al bestaande steen kan leggen
+en dat je alleen stenen kan leggen in een radius van je laatste move. Ik denk dat dit mijn algoritme verbeterd omdat je een aantal moves elimineert, namelijk
+de moves die nergens in de buurt liggen en naar mijn redenatie dus ook niet logisch zijn om te zetten. 
+Met de radius van 5 techniek zorg je ervoor dat je gerichter kan aanvallen, het leggen van stenen naast bestaande stenen is een vorm van gerichter verdedigen.
+
+Constante = 1.5 tactiek is alleen stenen naar al liggende stenen leggen
+0.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]
+0.0 1.5 [HEURISTIC Milo Beliën Color: White ID: 1758427, 1.5]
+0.5 0.0 [random_player, 0.5]
+0.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]
+0.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]
+0.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]
+0.0 0.5 [HEURISTIC Milo Beliën Color: White ID: 1758427, 0.5]
+1.5 0.0 [random_player, 1.5]
+0.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]
+0.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]2.
+20 matches gespeeld waarvan 14 gewonnen 2 gelijkgespeeld, 16/20 = 80% winrate
+
+0.0 0.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [DEFAULT Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [DEFAULT Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [DEFAULT Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.5 [HEURISTIC Milo Beliën Color: White ID: 1758427, 1.5]
+0.5 0.0 [DEFAULT Milo Beliën Color: Black ID: 1758427, 0.5]
+0.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [DEFAULT Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: Black ID: 1758427, 0.0]
+0.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [DEFAULT Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [DEFAULT Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [DEFAULT Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [DEFAULT Milo Beliën Color: Black ID: 1758427, 1.0]
+20 matches gespeeld waarvan 10 gewonnen 1 gelijkgespeeld, 11/20 = 55% winrate
+20 matches gespeeld waarvan 9 gewonnen 1 gelijkgespeeld, 10/20 = 50% winrate
+
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 1.5 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.5]
+0.5 0.0 [random_player, 0.5]
+0.0 0.5 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.5]
+1.5 0.0 [random_player, 1.5]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [random_player, 2.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [random_player, 2.0]
+0.0 2.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [random_player, 2.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [random_player, 2.0]
+0.0 2.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 2.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [random_player, 2.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [random_player, 2.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 2.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [random_player, 2.0]
+0.0 2.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [random_player, 2.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [random_player, 1.0]
+
+60 matches gespeeld waarvan 33 gewonnen 2 gelijkgespeeld, 35/20 = 58% winrate 
+Ik heb games waar je gelijkspeelt ook als een win beschouwen.
+
+
+0.0 1.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+1.0 0.0 2.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 3.0]
+1.0 0.0 0.0 [random_player, 1.0]
+0.0 0.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 1.0]
+2.0 0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+1.0 2.0 0.0 [random_player, 3.0]
+0.0 0.0 0.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 3.0]
+2.0 1.0 0.0 [random_player, 3.0]
+0.0 1.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+1.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+1.0 1.0 0.0 [random_player, 2.0]
+0.0 2.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 3.0]
+0.0 0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+1.0 2.0 0.0 [random_player, 3.0]
+0.0 2.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 4.0]
+0.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+0.0 1.0 0.0 [random_player, 1.0]
+0.0 0.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+2.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 3.0]
+0.0 1.0 0.0 [random_player, 1.0]1
+0.0 2.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 4.0]
+0.0 0.0 2.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 0.0 [random_player, 0.0]
+0.0 2.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 3.0]
+0.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 1.0 0.0 [random_player, 2.0]
+0.0 1.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 3.0]
+1.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 1.0 0.0 [random_player, 1.0]
+0.0 2.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 4.0]
+0.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+0.0 1.0 0.0 [random_player, 1.0]
+0.0 0.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+2.0 0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 2.0 0.0 [random_player, 2.0]
+0.0 1.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+1.0 0.0 2.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 3.0]
+1.0 0.0 0.0 [random_player, 1.0]
+0.0 2.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 4.0]
+0.0 0.0 2.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 0.0 [random_player, 0.0]
+0.0 1.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 3.0]
+1.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 1.0 0.0 [random_player, 1.0]
+0.0 2.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 4.0]
+0.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+0.0 1.0 0.0 [random_player, 1.0]
+0.0 2.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 4.0]
+0.0 0.0 2.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 0.0 0.0 [random_player, 0.0]
+0.0 2.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 4.0]
+0.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+0.0 1.0 0.0 [random_player, 1.0]
+0.0 2.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 3.0]
+0.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 1.0 0.0 [random_player, 2.0]
+0.0 1.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+1.0 0.0 2.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 3.0]
+1.0 0.0 0.0 [random_player, 1.0]
+0.0 1.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+1.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+1.0 1.0 0.0 [random_player, 2.0]
+0.0 1.0 2.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 3.0]
+1.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+0.0 1.0 0.0 [random_player, 1.0]
+0.0 1.0 1.0 [HEURISTIC Milo Beliën Color: White ID: 1758427, 2.0]
+1.0 0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 2.0]
+1.0 1.0 0.0 [random_player, 2.0]
+
+
+totaal aantal matches gespeeld = 92
+heuristic: 56 / 92 = 61%
+default:   43 / 92 = 47%
+random:    32 / 92 = 35%
+
+
+
+Hoge constante (8) vs het normale MCTS algoritme met een constante van 1.5
+ik heb gekozen om tegen een normale MCTS algoritme te spelen omdat ik denk dat ik 
+hier het meeste tegen ga spelen. Ik wil dus het beste geoptimaliseerd zijn tegen deze
+tegenstander.
+
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 0.5 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.5]
+1.5 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.5]
+
+
+HEURISTIC   = 67.5% winrate
+DEAFULT     = 32.5% winrate  
+
+Nu pak ik een constante van 32 vs een constante can 2
+
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+vs random
+0.0 1.0 [random_player, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 0.0 [random_player, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 1.0 [random_player, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [random_player, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 0.0 [random_player, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 2.0 [random_player, 2.0]
+0.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 0.0]
+0.0 1.0 [random_player, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 2.0 [random_player, 2.0]
+0.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 0.0]
+0.0 2.0 [random_player, 2.0]
+0.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 0.0]
+
+
+HEURISTIC   = 80% winrate
+DEFAULT     = 20% winrate
+Ik ben van plan hier een grotere test voor te doen, deze cijfers zijn namelijk erg veel belovend. 
+
+Ik probeer nu een test met een constante van 128 vs eentje van 1.5
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 0.5 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.5]
+1.5 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.5]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+HEURISTIC   = 62.5% winrate
+DEFAULT     = 37.5% winrate
+
+
+
+De optimale constante ligt dus ergens tussen de 32 en 128
+Ik probeer nu een constante van 64
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 0.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 1.0 [DEFAULT Milo Beliën Color: White ID: 1758427, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+vs random
+0.0 1.0 [random_player, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 2.0 [random_player, 2.0]
+0.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 0.0]
+0.0 2.0 [random_player, 2.0]
+0.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 0.0]
+0.0 0.5 [random_player, 0.5]
+1.5 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.5]
+0.0 0.0 [random_player, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 1.0 [random_player, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+0.0 0.0 [random_player, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 0.0 [random_player, 0.0]
+2.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 2.0]
+0.0 1.0 [random_player, 1.0]
+1.0 0.0 [HEURISTIC Milo Beliën Color: Black ID: 1758427, 1.0]
+HEURISTIC   = 80% winrate
+DEFAULT     = 20% winrate
