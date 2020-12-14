@@ -2,9 +2,7 @@
 #include "cube.hpp"
 
 cube::cube( sf::Vector2f position, sf::Vector2f size, sf::Color color):
-  position(position),
-  size(size),
-  color(color)
+  drawable(position, color, "CUBE", size)
 {}
 
 void cube::draw( sf::RenderWindow & window ) {
@@ -41,15 +39,4 @@ void cube::clearHits(){
 
 void cube::move( sf::Vector2f delta ){
 	position += delta;
-}
-
-void cube::jump( sf::Vector2f target ){
-	position = target;
-}
-
-void cube::jump( sf::Vector2i target ){
-	jump( sf::Vector2f(
-		static_cast< float >( target.x ),
-		static_cast< float >( target.y )
-	));
 }

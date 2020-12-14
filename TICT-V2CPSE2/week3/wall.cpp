@@ -2,13 +2,10 @@
 #include "wall.hpp"
 
 wall::wall( sf::Vector2f position, sf::Vector2f size, sf::Color color):
-  position(position),
-  size(size),
-  color(color)
+  drawable(position, color, "WALL", size)
 {}
 
 void wall::draw( sf::RenderWindow & window ) {
-  //sf::RectangleShape wall;
   rect.setSize(size);
   rect.setPosition(position);
   rect.setFillColor(color);

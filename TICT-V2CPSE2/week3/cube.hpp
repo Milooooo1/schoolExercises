@@ -9,9 +9,9 @@ public:
 
   cube( sf::Vector2f position, sf::Vector2f size, sf::Color color = sf::Color::Magenta );
 
-	void draw( sf::RenderWindow & window ) override;
+  void draw( sf::RenderWindow & window ) override;
 
-  sf::FloatRect getGlobalBounds();
+  sf::FloatRect getGlobalBounds() override ;
 
   void setXHit();
   void setYHit();
@@ -20,13 +20,10 @@ public:
   void clearHits();
 
   void move( sf::Vector2f delta );
-  void jump( sf::Vector2f target );
-  void jump( sf::Vector2i target );
-  
+
+
 private:
   sf::RectangleShape rect;
-  sf::Vector2f position, size;
-  sf::Color color;
   bool xhit, yhit;
 };
 

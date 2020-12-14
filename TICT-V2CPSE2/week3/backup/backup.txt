@@ -1,0 +1,7 @@
+(320.0,249.0) BALL cyan 30
+(10,10) WALL blue (620,10)
+(620,10) WALL blue (10,460)
+(10,460) WALL blue (620,10)
+(10,10) WALL blue (10,460)
+(310,230) KUBUS magenta (40,40)
+(10, 50) IMG ball-photo.png (40, 40)

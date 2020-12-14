@@ -3,22 +3,16 @@
 #include <iostream>
 
 ball::ball( sf::Vector2f position, sf::Color color , float size) :
-	position{ position },
-	color( color ),
-	size{ size }
+	drawable( position, color, "BALL", sf::Vector2f(size, 0.0)),
+	radius{ size }
 {}
 
 void ball::draw( sf::RenderWindow & window ) {
-	// sf::CircleShape circle;
-	circle.setRadius(size);
+	circle.setRadius(radius);
 	circle.setPosition(position);
 	circle.setFillColor(color);
 	window.draw(circle);
 }
-
-// void ball::move( sf::Vector2f delta ){
-// 	position += delta;
-// }
 
 void ball::setSpeed( sf::Vector2f delta ){
 	speed = delta;
@@ -26,17 +20,6 @@ void ball::setSpeed( sf::Vector2f delta ){
 
 void ball::move(){
 	position += speed;
-}
-
-void ball::jump( sf::Vector2f target ){
-	position = target;
-}
-
-void ball::jump( sf::Vector2i target ){
-	jump( sf::Vector2f(
-		static_cast< float >( target.x ),
-		static_cast< float >( target.y )
-	));
 }
 
 sf::FloatRect ball::getCurrentPosition(){
@@ -64,4 +47,8 @@ void ball::changeXSpeed(){
 
 void ball::changeYSpeed(){
 	speed.y *= -1;
+}
+
+sf::FloatRect ball::getGlobalBounds(){
+  return circle.getGlobalBounds();
 }

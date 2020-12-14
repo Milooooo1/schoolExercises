@@ -11,13 +11,10 @@ public:
 
 	void draw( sf::RenderWindow & window ) override ;
 
-	//void move( sf::Vector2f delta );
+	sf::FloatRect getGlobalBounds() override ;
 
 	void setSpeed( sf::Vector2f delta );
 	void move();
-
-	void jump( sf::Vector2f target );
-	void jump( sf::Vector2i target );
 
 	sf::FloatRect getCurrentPosition();
 	sf::FloatRect giveNextXPos();
@@ -26,12 +23,10 @@ public:
 	void changeXSpeed();
 	void changeYSpeed();
 
-	//void changeDirection( sf::Vector2f direction );
 private:
 	sf::CircleShape circle;
-	sf::Vector2f position, speed;
-	sf::Color color;
-	float size;
+	sf::Vector2f speed;
+	float radius;
 };
 
 #endif

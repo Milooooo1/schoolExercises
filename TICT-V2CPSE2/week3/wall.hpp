@@ -12,11 +12,10 @@ public:
 	void draw( sf::RenderWindow & window ) override;
 
     sf::FloatRect getGlobalBounds();
-    
+
+
 private:
-    sf::Vector2f position, size;
     sf::RectangleShape rect;
-    sf::Color color;
 };
 
 #endif
