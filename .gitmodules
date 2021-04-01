@@ -1,0 +1,3 @@
+[submodule "TICT-VISN/ML-Workshop-CNN/TICT-VISN/ML-Workshop-CNN/python-mnist"]
+	path = TICT-VISN/ML-Workshop-CNN/TICT-VISN/ML-Workshop-CNN/python-mnist
+	url = https://github.com/sorki/python-mnist
