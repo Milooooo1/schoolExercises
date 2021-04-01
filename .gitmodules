@@ -1,3 +1,6 @@
 [submodule "TICT-VISN/ML-Workshop-CNN/TICT-VISN/ML-Workshop-CNN/python-mnist"]
 	path = TICT-VISN/ML-Workshop-CNN/TICT-VISN/ML-Workshop-CNN/python-mnist
 	url = https://github.com/sorki/python-mnist
+[submodule "TICT-VISN/DissectingImageCrops"]
+	path = TICT-VISN/DissectingImageCrops
+	url = https://github.com/Milooooo1/DissectingImageCrops/
